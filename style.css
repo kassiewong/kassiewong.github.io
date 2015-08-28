@@ -1,0 +1,263 @@
+/*http://miguel-perez.github.io/smoothState.js/typical-implementation.html*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #fafafa;
+}
+/*
+ * CSS Animations
+ * Don't forget to add vendor prefixes!
+ */
+
+.m-scene .scene_element {
+    -webkit-animation-duration: 1s;
+    -webkit-transition-timing-function: ease-in;
+    -webkit-animation-fill-mode: both;
+}
+
+
+
+.m-scene.is-exiting .scene_element {
+    -webkit-animation-direction: alternate-reverse;
+}
+
+
+
+.m-scene .scene_element--fadeIn {
+    -webkit-animation-name: fadeIn;
+}
+/*
+ * Keyframes
+ */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.m-scene .slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+
+
+
+
+
+
+.smaller {
+    height: 100px;
+}
+
+.smaller li {
+    font-size: 18px;
+    line-height: 100px;
+}
+
+.smaller .logo {
+    height: 50px;
+    width: 50px;
+}
+
+.h1 {
+    font-size: 25px;
+    border-bottom: 4px solid #fff;
+    display: inline-block;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    max-width: 80%;
+}
+
+nav {
+    height: 170px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+.logo {
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 80px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.space {
+    height: 170px;
+}
+
+nav ul {
+    text-align: right;
+    margin-right: 80px !important;
+    height: 100%;
+}
+
+nav li {
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 170px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+.active {
+    color: #91D9B1;
+}
+
+.gallery {
+    float: left;
+    position: relative;
+}
+
+.item {
+}
+
+
+.gallery img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.infoContainer {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: #91D9B1;
+    opacity: 0;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.gallery:hover .infoContainer {
+    opacity: 1;
+    transition: opacity .10s ease-in-out;
+   -moz-transition: opacity .10s ease-in-out;
+   -webkit-transition: opacity .10s ease-in-out;
+}
+
+.info {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 480px) {
+    /* Smartphone view: 1 tile */
+
+    .gallery {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 650px) and (min-width: 481px) {
+    /* Tablet view: 2 tiles */
+
+    .gallery {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1050px) and (min-width: 651px) {
+    /* Small desktop / ipad view: 3 tiles */
+
+    .gallery {
+        width: 33.3%;
+    }
+}
+
+@media only screen and (max-width: 1290px) and (min-width: 1051px) {
+    /* Medium desktop: 4 tiles */
+
+    .gallery {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 1590px) and (min-width: 1291px) {
+    /* Large desktop: 5 tiles */
+
+    .gallery {
+        width: 25%;
+    }
+}
+.overlay {
+    display: none;
+}
+
+
+
+
+

@@ -1,0 +1,45 @@
+.breadcrumb {
+    margin: 50px 100px 30px 100px;
+}
+
+.project {
+    margin: 30px 100px 100px 100px !important;
+}
+
+.projectImage img {
+    width: 100%;
+}
+
+.h1 {
+    border-bottom: 4px solid #000;
+    display: inline-block;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.blurb {
+    text-align: center;
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.date,
+.tenents,
+.description {
+    float: left;
+    width: 33.3%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+/*
+.date, .tenents {
+    float: left;
+}
+
+.tenents, .date {
+    width: 33.3%
+}*/

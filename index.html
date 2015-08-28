@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="jquery.smoothState.min.js"></script>
+
+    <script src="script.js"></script>
+
+</head>
+
+<body ng-app="workApp" ng-controller="workCtrl">
+
+
+
+    <div ng-include src="'inc/nav.html'">
+
+    </div>
+
+
+
+
+    <!--
+    <div id="main" class="m-scene">
+       Classes that define elment animations
+      asdf
+      <div class="scene_element scene_element--fadein">
+        asdfasdf
+      </div>
+    </div>
+-->
+
+
+    <div class="gallery" ng-repeat="project in projects | orderBy:'date':true">
+
+        <div class="item">
+            <a href="projects/{{project.id}}.html">
+
+                <img src="{{ project.img }}" alt="">
+
+                <div class="infoContainer">
+
+                    <div class="info">
+                        <h1 class="h1">{{ project.name }}</h1> <p></p>{{ project.date | date:"yyyy" }}</div>
+
+                </div>
+
+                <!--
+            <div class="overlay" id="{{ project.id }}">
+
+                {{ project.description}}
+
+            </div>
+-->
+
+
+            </a>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 100) {
+                    $("nav").addClass('smaller');
+                } else {
+                    $("nav").removeClass("smaller");
+                }
+            });
+        });
+    </script>
+
+    <script src="smoothstate.js"></script>
+
+
+</body>
+
+</html>
