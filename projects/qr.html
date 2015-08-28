@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Responsive Client Design</title>
+    <title>QR Code Project</title>
 
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../projects.css">
@@ -29,10 +29,10 @@
 
         <div ng-include src="'../inc/navProjects.html'">
         </div>
-        <div class="breadcrumb"><a href="../index.html"><i class="fa fa-arrow-left" style="margin-right: 20px; color: #91D9B1"></i>Work</a> <span style="color:#91D9B1">/</span> {{ projects[0].name }}</div>
+        <div class="breadcrumb"><a href="../index.html"><i class="fa fa-arrow-left" style="margin-right: 20px; color: #91D9B1"></i>Work</a> <span style="color:#91D9B1">/</span> {{ projects[4].name }}</div>
 
         <div class="project">
-            <div class="projectImage"><img src="{{ projects[0].imgProject }}">
+            <div class="projectImage"><img src="{{ projects[4].imgProject }}">
 
 <!--
                 <a href="#" class="previous">
@@ -48,17 +48,17 @@
 
                 <div class="tenents">
                     <h1 class="h1">Tenents</h1>
-                    <p> {{ projects[0].tenents }}</p>
+                    <p> {{ projects[4].tenents }}</p>
                 </div>
 
                 <div class="date">
                     <h1 class="h1">Date</h1>
-                    <p> {{ projects[0].date | date:"yyyy"}}</p>
+                    <p> {{ projects[4].date | date:"yyyy"}}</p>
                 </div>
 
                 <div class="description">
                     <h1 class="h1">Description</h1>
-                    <p> {{ projects[0].description }}</p>
+                    <p> {{ projects[4].description }}</p>
                 </div>
             </div>
 
