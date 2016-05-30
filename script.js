@@ -1,4 +1,9 @@
 var myApp = angular.module('workApp', []);
+
+
+
+
+
 myApp.controller('workCtrl', function ($scope) {
     $scope.projects = [
         {
@@ -6,7 +11,6 @@ myApp.controller('workCtrl', function ($scope) {
             imgProject: "../img/responsive.png",
             name: "Responsive Client Website",
             date: "2015-01-01",
-//            May 20, 2015
             tenents: "Content Knowledge, Teamwork & Collaboration, Work Ethic, Presentation",
             description: "A project showcasing our client communication and responsive design skills.",
             id: "responsive"
@@ -100,35 +104,25 @@ myApp.controller('workCtrl', function ($scope) {
             tenents: "Content Knowledge, Presentation, Use of Resources",
             description: "An animation of a bouncing ball used to showcase the developmet of my Flash skills.",
             id: "bb"
+        },
+    		{
+            img: "img/internship.png",
+            imgProject: "../img/sq_internship.png",
+            name: "Clark County Internship",
+            date: "2015-07-06",
+            tenents: "n/a",
+            description: "An internship with Clark County where I helped out with projects such as OpenWeb and the new 2016 Elections website.",
+            id: "internship"
+        },
+    {
+            img: "img/capstone.png",
+            imgProject: "../img/sq_capstone.png",
+            name: "PIQUE",
+            date: "2015-08-28",
+            tenents: "Content Knowledge, Teamwork & Collaboration, Presentation, Use of Resources, Writing Skills",
+            description: "A capstone lasting the entire year that tested the Web Class's coding skills. PIQUE is a random activity generator created to combat eenage boredom. To make this website, we had to learn about PHP, mySQL, and Laravel.",
+            id: "capstone"
         }]
 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
