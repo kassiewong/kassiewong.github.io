@@ -223,6 +223,7 @@ a:hover {
     /* Smartphone view: 1 tile */
 
     .gallery {
+    	width: 50%;
     }
 }
 
