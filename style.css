@@ -181,6 +181,7 @@ a:hover {
 .gallery {
     float: left;
     position: relative;
+    width: 25%;
 }
 
 .item {
